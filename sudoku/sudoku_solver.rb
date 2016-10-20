@@ -5,6 +5,7 @@ SET = (1..9)
 # Sudoku board
 #
 # TODO: Validate board
+#
 class Board
   def initialize
     @store = []
@@ -43,7 +44,9 @@ class Board
   end
 end
 
+#
 # Position of element on the board in terms of row and col
+#
 class Position
   def initialize(row, col)
     @row = row
@@ -53,7 +56,9 @@ class Position
   attr_reader :row, :col
 end
 
+#
 # The 9x9 module of sudoku
+#
 class Box
   def initialize(key)
     @key = key
@@ -80,7 +85,9 @@ class Box
   end
 end
 
+#
 # Entries which are not filled, yet sure to appear in a certain row/column
+#
 class Linearity
   def initialize
     @rows = {}
@@ -145,7 +152,9 @@ class Linearity
   end
 end
 
+#
 # Stores possible positions of all unfilled entries of a box
+#
 class PossibilityMap
   def initialize(board, box, linearity)
     @board = board
@@ -270,7 +279,9 @@ class Solver
   end
 end
 
+#
 # Scnas input file and builds the board and boxes
+#
 class InputScanner
   BOX_SIZE = 3
 

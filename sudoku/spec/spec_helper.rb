@@ -1,6 +1,3 @@
-# require_relative '../inputs/input_easy'
-# require_relative '../inputs/input_medium'
-# require_relative '../inputs/input_hard'
 require_relative '../sudoku_solver'
 
 RSpec.configure do |config|

@@ -37,9 +37,6 @@ end
 # More unit tests can go in the similar fashion
 # Next is overall sudoku solver spec
 #
-# The current algorithm is only able to solve Easy and Medium puzzels
-# Will need more time/thinking for solving Hard puzzels
-#
 
 describe Solver do
   let(:easy_input) { InputScanner.new('inputs/input_easy') }

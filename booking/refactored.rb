@@ -173,6 +173,14 @@ class BookingsController < ApplicationController
   end
 
   def permited_params
-    params.require(:booking).permit(:lesson_id)
+    params.require(:booking).permit(permitted_columns)
+  end
+
+  def permitted_columns
+    Booking.column_names.map(&:to_sym) - unpermitted_columns
+  end
+
+  def unpermitted_columns
+    [:cancelled]
   end
 end

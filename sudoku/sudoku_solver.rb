@@ -280,7 +280,7 @@ class Solver
 end
 
 #
-# Scnas input file and builds the board and boxes
+# Scans input file and builds the board and boxes
 #
 class InputScanner
   BOX_SIZE = 3
